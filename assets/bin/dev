@@ -1,0 +1,1 @@
+node-sass --include-path scss ./assets/scss/style.scss ./public/css/style.css && uglifyjs ./assets/js/scripts.js --compress --mangle --warn --output ./public/js/scripts.min.js

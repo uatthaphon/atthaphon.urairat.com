@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:100,100i,300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,700,700i&display=swap');
+// @import 'node_modules/bootstrap/scss/bootstrap';
+// @import 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+$blue: #3ea5ce;
+$green:#99c712;
+$yellow: lighten(#ffba00, 5%);
+$red: #e53b3a;
+$smoke: #f4ecd8;
+$colors: $blue, $green, $yellow, $red, $smoke;
+
+$bg_color: #f4ecd8;
+$text_color: #1c1b20;
+$font_thai: 'Kanit', sans-serif;
+$font_eng: 'Roboto', sans-serif;
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(100%)
+  }
+
+  100% {
+    -webkit-transform: translateY(0)
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+body {
+  font-family: 'Kanit', 'Roboto', sans-serif;
+  margin: 0;
+  background-color: $bg_color;
+  color: $text_color;
+}
+
+.hero {
+  background-color: $text_color;
+  color: $bg_color;
+  height: 100vh;
+  position: relative;
+
+  .content {
+    color: $bg_color;
+    padding-left: 1.875rem;
+    position: absolute;
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+
+    @media screen and (min-width: 1024px) {
+      padding-left: 7.5rem;
+    }
+    .my-img {
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 0.1875rem solid;
+      max-width: 5rem;
+      @media screen and (min-width: 1024px) {
+        max-width: 7.5rem;
+      }
+    }
+    .ani {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      .title {
+        font-family: $font_eng;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: .3125rem;
+        margin-top: 0;
+
+        animation: animate 1.2s cubic-bezier(.2,.6,.2,1);
+        -webkit-animation-delay: .1s;
+        animation-delay: .1;
+        animation-fill-mode: backwards;
+
+        @media screen and (min-width: 1024px) {
+          font-size: 5rem;
+          margin-bottom: .625rem;
+        }
+
+      }
+      .subtitle {
+        font-family: $font_thai;
+        font-size: 1.875rem;
+        font-weight: 500;
+        margin: 0;
+
+        animation: animate 1.2s cubic-bezier(.2,.6,.2,1);
+        animation-fill-mode: backwards;
+        -webkit-animation-delay: .5s;
+        animation-delay: .5;
+
+        @media screen and (min-width: 1024px) {
+          font-size: 3.2rem;
+        }
+      }
+    }
+
+    .social {
+      margin: 0.9375rem 0;
+      padding: 0;
+      list-style: none;
+
+      .item {
+        display: inline;
+        font-size: 0.875rem;
+        font-weight: 100;
+        @media screen and (min-width: 1024px) {
+          font-size: 1rem;
+        }
+        .link {
+          color: $bg_color;
+          margin-right: 0.9375rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+.content {
+  .container {
+    padding: 4.375rem 1.875rem;
+    @media screen and (min-width: 1024px) {
+      padding: 9rem 7.5rem;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+      position: relative;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.875rem;
+        margin-bottom: 2.5rem;
+      }
+      &::after {
+        content: "";
+        background: $text_color;
+        bottom: -0.125rem;
+        height: 0.125rem;
+        left: 0;
+        position: absolute;
+        width: 15%;
+        @media screen and (min-width: 1024px) {
+          width: 5%;
+        }
+      }
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.25rem;
+      }
+      &.last {
+        margin-bottom: 2.5rem;
+        @media screen and (min-width: 1024px) {
+          margin-bottom: 3.75rem;
+        }
+      }
+    }
+    ul {
+      margin-top: 0;
+      padding-left: 0;
+      &.list {
+        list-style: none;
+        margin-bottom: 2.5rem;
+        @media screen and (min-width: 1024px) {
+          margin-bottom: 3.75rem;
+        }
+      }
+      li {
+        &.item {
+          margin-bottom: 1.25rem;
+          a {
+            &.link {
+              color: $text_color;
+              font-size: 0.9375rem;
+              font-weight: 700;
+              margin-bottom: 0.3125rem;
+              text-decoration: none;
+              @media screen and (min-width: 1024px) {
+                font-size: 1.25rem;
+              }
+            }
+          }
+          p {
+            font-size: 0.75rem;
+            margin: 0;
+            @media screen and (min-width: 1024px) {
+              font-size: 0.9375rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
