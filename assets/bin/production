@@ -1,0 +1,1 @@
+node-sass --include-path scss --output-style compressed ./assets/scss/style.scss ./public/css/style.min.css && uglifyjs ./node_modules/jquery/dist/jquery.min.js ./assets/js/scripts.js --compress --mangle --warn --output ./public/js/scripts.min.js
